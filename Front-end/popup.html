@@ -1,15 +1,24 @@
 <!DOCTYPE html>
 <html>
+
 <head>
   <title>Spoiler Blocker</title>
   <link rel="stylesheet" href="popup.css">
 </head>
+
 <body>
   <div class="container">
     <h1>Spoiler Blocker</h1>
-    <button id="blockButton">Block Spoilers</button>
+    <h2>Enter blocked keywords:</h2>
+    <input type="text" id="keywordsInput" placeholder="e.g., spoiler, ending">
+    <button id="saveKeywordsBtn">Save Keywords</button>
+
+    <!-- <button id="blockButton">Block Spoilers</button> -->
     <p id="statusMessage"></p>
   </div>
+  <!-- Include TensorFlow.js -->
+  <script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs"></script>
   <script src="popup.js"></script>
 </body>
+
 </html>

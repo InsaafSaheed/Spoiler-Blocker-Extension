@@ -13,5 +13,15 @@ function blockSpoilers() {
           "No spoilers found on this page.";
       }
     });
+
+  const keywordsInput = document.getElementById('keywordsInput');
+  const saveKeywordsBtn = document.getElementById('saveKeywordsBtn');
+
+  saveKeywordsBtn.addEventListener('click', function () {
+    const keywords = keywordsInput.value.split(',').map(keyword => keyword.trim());
+    chrome.storage.sync.set({ blockedKeywords: keywords }, function () {
+      alert('Blocked keywords saved.');
+    });
   });
+});
 }
